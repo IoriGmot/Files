@@ -25,7 +25,7 @@ using UnityEngine;
 
         private void Start()
         {
-            // Cache the camera, Camera.main is an expensive operation.
+            
             mainCamera = Camera.main;
         }
 
@@ -41,14 +41,8 @@ using UnityEngine;
             var (success, position) = GetMousePosition();
             if (success)
             {
-                // Calculate the direction
+                
                 var direction = position - transform.position;
-
-                // You might want to delete this line.
-                // Ignore the height difference.
-                direction.y = 0;
-
-                // Make the transform look in the direction.
                 transform.forward = direction;
             }
         }
